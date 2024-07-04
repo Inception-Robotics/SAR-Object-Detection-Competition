@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             --background-color: #000000;
             --text-color: #ffffff;
         }
+
         body {
             font-family: 'Share Tech Mono', monospace;
             font-size: large;
@@ -22,6 +24,7 @@
             color: var(--text-color);
             background-color: var(--background-color);
         }
+
         header {
             background-color: rgba(0, 0, 0, 0.8);
             color: var(--primary-color);
@@ -31,11 +34,13 @@
             border-bottom: 2px solid var(--primary-color);
             box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
         }
+
         main {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
+
         section {
             margin-bottom: 2rem;
             border: 1px solid var(--secondary-color);
@@ -43,10 +48,13 @@
             background-color: rgba(0, 0, 0, 0.7);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             color: var(--primary-color);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
+
         .timer {
             font-size: 2rem;
             font-weight: bold;
@@ -57,6 +65,7 @@
             color: var(--secondary-color);
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
+
         .cta-button {
             display: inline-block;
             background-color: var(--primary-color);
@@ -68,21 +77,26 @@
             transition: all 0.3s ease;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
+
         .cta-button:hover {
             background-color: var(--secondary-color);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
+
         .icon {
             margin-right: 0.5rem;
         }
+
         .faq-item {
             margin-bottom: 1rem;
         }
+
         .faq-question {
             cursor: pointer;
             font-weight: bold;
             color: var(--primary-color);
         }
+
         .faq-answer {
             display: none;
             padding-left: 1rem;
@@ -90,6 +104,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1><i class="fas fa-satellite icon"></i>Inception Robotics SAR Object Detection Challenge</h1>
@@ -98,34 +113,48 @@
     <main>
         <section id="overview">
             <h2><i class="fas fa-info-circle icon"></i>Overview</h2>
-            <p>The objective of this challenge is to achieve superior mAP@50 scores on the SARDet-100K dataset, surpassing the performance demonstrated in the <a href="https://arxiv.org/abs/2403.06534">SARDet-100K paper</a>
+            <p>The objective of this challenge is to achieve superior mAP@50 scores on the SARDet-100K dataset,
+                surpassing the performance demonstrated in the <a href="https://arxiv.org/abs/2403.06534">SARDet-100K
+                    paper</a>
             </p>
         </section>
         <section id="description">
             <h2><i class="fas fa-list icon"></i>Description</h2>
             <p>
-                Synthetic Aperture Radar (SAR) images are an integral part of remote sensing, well-suited for capturing geographical images under any weather condition, land cover, camouflage, etc. 
-                Detecting objects in SAR images is challenging due to the limited availability of data, low resolution, small size of objects, and the significant domain gap when adapting models pre-trained on natural RGB datasets. These challenges are explained in detail in the <a href="https://arxiv.org/abs/2403.06534">paper</a>.
-             </p>
-            <p> 
-                For this challenge, participants are expected to build on the improvements in mAP demonstrated in the SARDet-100k paper. Many key insights on handling SAR images are already provided in the paper. 
-                Participants must leverage these insights (e.g., using handcrafted features using the Wavelet Scattering Transform) and bring in their own ideas to train an object detection model that establishes a new state-of-the-art performance on the SARDet-100k dataset. 
-                Models need not be limited to compact CNN or Transformer-based models. Participants are encouraged to also leverage the latest open-source large multimodal models (e.g., GLIP, Grounding DINO, Llama3, Florence).
+                Synthetic Aperture Radar (SAR) images are an integral part of remote sensing, well-suited for capturing
+                geographical images under any weather condition, land cover, camouflage, etc.
+                Detecting objects in SAR images is challenging due to the limited availability of data, low resolution,
+                small size of objects, and the significant domain gap when adapting models pre-trained on natural RGB
+                datasets. These challenges are explained in detail in the <a
+                    href="https://arxiv.org/abs/2403.06534">paper</a>.
+            </p>
+            <p>
+                For this challenge, participants are expected to build on the improvements in mAP demonstrated in the
+                SARDet-100k paper. Many key insights on handling SAR images are already provided in the paper.
+                Participants must leverage these insights (e.g., using handcrafted features using the Wavelet Scattering
+                Transform) and bring in their own ideas to train an object detection model that establishes a new
+                state-of-the-art performance on the SARDet-100k dataset.
+                Models need not be limited to compact CNN or Transformer-based models. Participants are encouraged to
+                also leverage the latest open-source large multimodal models (e.g., GLIP, Grounding DINO, Llama3,
+                Florence).
             </p>
 
             <hr>
-            <h4>Dataset</h4> The GitHub repository for the dataset and a SAR object detection model can be found <a href="https://github.com/zcablii/SARDet_100K">here</a>
+            <h4>Dataset</h4> The GitHub repository for the dataset and a SAR object detection model can be found <a
+                href="https://github.com/zcablii/SARDet_100K">here</a>
 
             <hr>
             <h4>Deliverable</h4>
             <p>Participants must submit the following deliverables:</p>
             <ul>
-                <li>An open-source repository containing all the code under MIT License. The code repository must be made open source after the submission deadline to be eligible for the rewards</li>
-                <li>The open-sourced repository must contain Colab notebook (preferable) with training and testing code. (OR) Easily reproducible code with detailed comments and instructions for running it</li>
+                <li>An open-source repository containing all the code under MIT License. The code repository must be
+                    made open source after the submission deadline to be eligible for the rewards</li>
+                <li>The open-sourced repository must contain Colab notebook (preferable) with training and testing code.
+                    (OR) Easily reproducible code with detailed comments and instructions for running it</li>
                 <li>PDF (1-2 pages) with the new ideas that the team used to improve performance</li>
             </ul>
 
-            
+
         </section>
 
 
@@ -140,9 +169,14 @@
             <h4>NOTES</h4>
             <ul>
                 <li>For teams that surpass the mAP@50 scores in the SARdet-100K paper (mAP@50 of 84.0)</li>
-                <li>We encourage every team to share their work even if they do not surpass the performance in the paper. Teams with interesting and novel ideas will still be considered for cash prices and internship opportunities at Inception Robotics</li>
-                <li>Leaderboard for the competition will be made public after the submission deadline, and evaluations are completed</li>
-                <li>Overfitting the model on test dataset will disqualify the team from the competition. The winners of the competitions will only receive the rewards if the claimed results can be fairly reproduced by Inception Robotics' team</li>
+                <li>We encourage every team to share their work even if they do not surpass the performance in the
+                    paper. Teams with interesting and novel ideas will still be considered for cash prices and
+                    internship opportunities at Inception Robotics</li>
+                <li>Leaderboard for the competition will be made public after the submission deadline, and evaluations
+                    are completed</li>
+                <li>Overfitting the model on test dataset will disqualify the team from the competition. The winners of
+                    the competitions will only receive the rewards if the claimed results can be fairly reproduced by
+                    Inception Robotics' team</li>
                 <li>Only one submission per team is allowed</li>
 
             </ul>
@@ -151,32 +185,44 @@
             <h2><i class="fas fa-user-plus icon"></i>Registration</h2>
             <ul>
                 <li>Registration Deadline: <u>22nd July 2024 11:59 PM ET</u></li>
-                <li>The teams can submit the deliverables by sharing the link to the open-sourced repository and the PDF document describing the idea at team@inceptionrobotics.ai before the deadline</li>
+                <li>The teams can submit the deliverables by sharing the link to the open-sourced repository and the PDF
+                    document describing the idea at team@inceptionrobotics.ai before the deadline</li>
                 <li>An individual or a group of individuals are eligible to take part in this competition</li>
-                <li>After submitting the participation request, Inception Robotics' team will send a follow up email confirming the participation request</li>
+                <li>After submitting the participation request, Inception Robotics' team will send a follow up email
+                    confirming the participation request</li>
                 <li>Only the confirmed teams are eligible for the rewards</li>
                 <li>The registrations are on a rolling basis</li>
             </ul>
-            <button class="cta-button" onclick="window.location.href='https://forms.office.com/pages/responsepage.aspx?id=TL2oEZuqUUKNeDz_LCNmxL40EIT4hIpPnjb2tbOaeq5URDk4NTMyNjBCOThaNVlEUjdGSlRJVjVXSS4u'">Register Now</button>
+            <button class="cta-button"
+                onclick="window.location.href='https://forms.office.com/pages/responsepage.aspx?id=TL2oEZuqUUKNeDz_LCNmxL40EIT4hIpPnjb2tbOaeq5URDk4NTMyNjBCOThaNVlEUjdGSlRJVjVXSS4u'">Register
+                Now</button>
         </section>
         </section>
         <section id="contactus">
             <h2><i class="fas fa-question-circle icon"></i>Contact Us</h2>
-            <p>For any queries, please contact us at <a href="mailto:team@inceptionrobotics.ai"> Inception Robotics</a></p>
+            <p>For any queries, please contact us at <a href="mailto:team@inceptionrobotics.ai"> Inception Robotics</a>
+            </p>
         </section>
         <section id="rules">
             <h2><i class="fas fa-list icon"></i>Rules</h2>
-            <button class="cta-button" onclick="window.location.href='https://inception-robotics.github.io/SAR-Object-Detection-Competition/Inception_Robotics_SAR_Object_detection_competition_july2024.pdf'">More</button>
+            <button class="cta-button"
+                onclick="window.location.href='https://inception-robotics.github.io/SAR-Object-Detection-Competition/Inception_Robotics_SAR_Object_detection_competition_july2024.pdf'">More</button>
         </section>
     </main>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CDNN0QL4C"></script>
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8CDNN0QL4C');
         // Countdown timer
 
         const no_of_days = 10;
 
         const countDownDate = new Date("July 22, 2024 11:59:00 EST").getTime();
 
-        const countdown = setInterval(function() {
+        const countdown = setInterval(function () {
             const now = new Date().getTime();
             const distance = countDownDate - now;
 
@@ -194,4 +240,5 @@
         }, 1000);
     </script>
 </body>
+
 </html>
